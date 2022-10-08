@@ -1,0 +1,25 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "ankimolecules"
+authors = [{name = "Leo Gaskin", email = "leo.gaskin@le0.gs"}]
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+
+dependencies = [
+  "ankipandas~=0.3",
+  "genanki~=0.13",
+  "tqdm~=4.64",
+  "httpx~=0.23",
+]
+
+[project.urls]
+Home = "https://github.com/leotaku/ankimolecules"
+
+[project.scripts]
+ankimolecules_render = "ankimolecules.render:main"
+ankimolecules_generate = "ankimolecules.generate:main"
+ankimolecules_extract = "ankimolecules.extract:main"
